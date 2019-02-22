@@ -9,6 +9,9 @@ function rot13(str) { // LBH QVQ VG!
   let answer="";
   
   //Walk through the inputArr
+  for (let i=0; i<inputArr.length; i++){
+    
+  }
   //If the element does not equal a letter, concatenate into the answer unchanged
   //If the element is a letter move it 13 positions to the right in the abc array
   //and return that element
