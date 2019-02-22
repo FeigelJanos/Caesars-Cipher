@@ -12,9 +12,10 @@ function rot13(str) { // LBH QVQ VG!
   
   //Walk through the inputArr
   for (let i=0; i<inputArr.length; i++){
-     
+     //If the element is a letter move it 13 positions to the right in the abc array
         switch(inputArr[i]){
             case "A":
+            //and return that element
             answerArr.push(abc[13]);
             break;
             case "B":
@@ -53,8 +54,9 @@ function rot13(str) { // LBH QVQ VG!
             case "M":
             answerArr.push(abc[25]);
             break;
-         
-            case "N":
+         //If it would run over the array, step from the beginning with however many steps it would overrun by
+            case "N": 
+            //Then add the letter to the answer string
             answerArr.push(abc[0]);
             break;
             case "O":
@@ -93,17 +95,18 @@ function rot13(str) { // LBH QVQ VG!
             case "Z":
             answerArr.push(abc[12]);
             break;
+            //If the element does not equal a letter, concatenate into the answer unchanged
             default:
             answerArr.push(inputArr[i]);
             break;
         }
  
   }
-  //If the element does not equal a letter, concatenate into the answer unchanged
-  //If the element is a letter move it 13 positions to the right in the abc array
-  //and return that element
-  //If it would run over the array, step from the beginning with however many steps it would overrun by
-  //Then add the letter to the answer string
+  
+  
+  
+  
+ 
    let answer=answerArr.join("");
    
   //return the answer
